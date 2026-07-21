@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF5EE;
+    color: #242020;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8C4A8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8644F;
+}
+
+/* Glassmorphism & Soft Lighting Effects */
+.glass-header {
+  background: rgba(250, 245, 238, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(216, 196, 168, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 253, 249, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(216, 196, 168, 0.4);
+}
+
+.glass-dark {
+  background: rgba(44, 25, 44, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(135, 80, 91, 0.3);
+}
+
+/* Grain texture overlay option */
+.bg-grain {
+  background-image: radial-gradient(rgba(62, 36, 62, 0.05) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
